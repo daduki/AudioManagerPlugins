@@ -158,7 +158,7 @@ void IAmCommandReceiverShadow::setMainSourceSoundProperty(DBusConnection *conn, 
     assert(mpIAmCommandReceive!=NULL);
 
     mDBUSMessageHandler.initReceive(msg);
-    am_sourceID_t sourceID = (am_sinkID_t) mDBUSMessageHandler.getUInt();
+    am_sourceID_t sourceID = (am_sourceID_t) mDBUSMessageHandler.getUInt();
     dbus_int16_t type = 0;
     dbus_int16_t value = 0;
     mDBUSMessageHandler.getProperty(type, value);
